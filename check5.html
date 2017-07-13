@@ -16,9 +16,9 @@
 
 </head>	
 
-<body>
+<body onload=initializeViz();>
 <h1>"Storm Tracking" viz by National Oceanic and Atmospheric Administration </h1>
-Say: <i>"Open Storm Tracking Dashboard"</i>
+Say: <i>"Select ALEX" or "start over"</i>
 <br>
 <br>
 <center><div id='tableauViz'></div></center>
@@ -27,7 +27,6 @@ Say: <i>"Open Storm Tracking Dashboard"</i>
 if (annyang) {
   // These are the voice commands in quotes followed by the function
  var commands = {
-    'Open Storm Tracking Dashboard': function() { initializeViz(); responsiveVoice.speak('initializing the Storm Tracking dashboard for you', "UK English Male"); },
   	'Select ALEX': function() { selectAlex(); responsiveVoice.speak('selecting ALEX', 'UK English Male'); },
  	'Select Bonnie': function() { selectBonnie(); responsiveVoice.speak('selecting Bonnie'); },
  	'Select Colin': function() { selectColin(); responsiveVoice.speak('selecting Colin'); },
