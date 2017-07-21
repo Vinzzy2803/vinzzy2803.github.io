@@ -1,0 +1,67 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title> Wraps'and'Wiches Menu</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Creating Vinzzy">
+		<meta name="author" content="Vinit Ganatra">
+
+		<script src="annyang.min.js"></script> <!-- Voice Recognition -->
+		<script src="responsivevoice.js"></script> <!-- Voice Response -->
+		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+</head>	
+
+<body background="logo.PNG">
+<h1>Wraps'and'Wiches Menu</h1>
+<h3><Center><i>What would you like to have ? </Center></h3></i>
+<h3><Center> Sandwiches </Center></h3>
+<h3><Center> Wraps </Center></h3>
+<h3><Center> Burgers </Center></h3>
+<h3><Center> Ice Creams </Center></h3>
+<h3><Center> Thick Shakes </Center></h3>
+<h3><Center> Fries </Center></h3>
+<h3><Center> Salads </Center></h3>
+
+<br>
+<br>
+<center><div id="Audio"></div></center>
+
+<script>
+if (annyang) {
+  // These are the voice commands in quotes followed by the function
+ var commands = {
+  	'Open Menu': function() { OpenMenu(); responsiveVoice.speak('Openning Menu', 'UK English Male'); }
+
+ };
+  
+  // Add commands to annyang
+  annyang.addCommands(commands);
+  
+  // Start listening.
+  annyang.start();
+}
+</script>
+
+<script>
+//Vinzzy says hello
+responsiveVoice.speak(' Here is the menu. What would you like to order ?','UK English Male');
+
+//Make Category selection
+function OpenMenu()
+	{
+	window.location.replace("https://vinzzy2803.github.io/MENU.html");
+	}
+</script>
+<img src="logo.PNG" alt="Logo Pic" style="width:1300px;height:500px;">
+</body>
+</html>		
+		
+		
