@@ -33,7 +33,7 @@ if (annyang) {
  	//'Select Bonnie': function() { selectBonnie(); responsiveVoice.speak('selecting Bonnie'); },
  	//'Select Colin': function() { selectColin(); responsiveVoice.speak('selecting Colin'); },
 	
-	'Select *tag': function() { CallSelect(); responsiveVoice.speak('selecting it'); },
+	'Select *tag': ShowSelect,
 	
  	'Select Danielle': function() { selectDanielle(); responsiveVoice.speak('selecting Danielle'); },
 	'Select EARL': function() { selectEarl(); responsiveVoice.speak('selecting EARL'); },
@@ -97,7 +97,7 @@ function selectColin()
 	}	
 */
 
-function CallSelect(tag)
+Var ShowSelect=function(tag)
 {
 activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', tag, 'REPLACE'); 
 }
