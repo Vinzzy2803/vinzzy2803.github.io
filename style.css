@@ -63,3 +63,13 @@ color:#3c8a2e;
 
 }
 
+.font{
+	font-family:"Open Sans",Verdana,Helvetica,sans-serif;
+}
+
+.dashboardheader
+{
+	position=absolute;
+	top=50px;
+	left=30%;
+}
