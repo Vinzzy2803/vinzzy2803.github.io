@@ -69,7 +69,7 @@ color:#3c8a2e;
 
 .dashboardheader
 {
-	position=absolute;
+	position:absolute;
 	top=150px;
 	left=30%;
 }
