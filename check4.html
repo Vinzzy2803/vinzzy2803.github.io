@@ -54,6 +54,11 @@ if (annyang) {
   
   // Start listening.
   annyang.start();
+  
+  Var ShowSelect=function(tag)
+{
+activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', tag, 'REPLACE'); 
+}
 }
 </script>
 
@@ -95,12 +100,12 @@ function selectColin()
 	{
 	activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', 'COLIN', 'REPLACE'); 
 	}	
-*/
+
 
 Var ShowSelect=function(tag)
 {
 activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', tag, 'REPLACE'); 
-}
+}*/
 
 function selectDanielle()
 	{
