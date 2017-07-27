@@ -16,7 +16,9 @@
 
 </head>	
 
-<body bgcolor="#313131">
+<body bgcolor="#313131" onload initViz()>
+<img src="deloitte-logo.svg" class="logo_deloitte" alt="Deloitte">
+
 <h1> <font color='white'>Storm Tracking" viz by National Oceanic and Atmospheric Administration</font color> </h1>
 Say: <i><font color='white'>Open Storm Tracking Dashboard"</font color></i>
 <br>
@@ -27,7 +29,7 @@ Say: <i><font color='white'>Open Storm Tracking Dashboard"</font color></i>
 if (annyang) {
   // These are the voice commands in quotes followed by the function
  var commands = {
-    'Open Storm Tracking Dashboard': function() { initializeViz(); responsiveVoice.speak('initializing the Storm Tracking dashboard for you', "UK English Male"); },
+    //'Open Storm Tracking Dashboard': function() { initializeViz(); responsiveVoice.speak('initializing the Storm Tracking dashboard for you', "UK English Male"); },
   	'Select ALEX': function() { selectAlex(); responsiveVoice.speak('selecting ALEX', 'UK English Male'); },
  	'Select Bonnie': function() { selectBonnie(); responsiveVoice.speak('selecting Bonnie'); },
  	'Select Colin': function() { selectColin(); responsiveVoice.speak('selecting Colin'); },
@@ -74,7 +76,7 @@ var options = {
 }
 
 //Vinzzy says hello
-responsiveVoice.speak('Hi. My name is Vinzzy. How may I help you?','UK English Male');
+responsiveVoice.speak('Welcome Storm Tracking Dashboard. How may I help you?','UK English Male');
 
 //Make Storm selection
 function selectAlex()
@@ -160,6 +162,22 @@ function startover()
 </script>
 
 </body>
+<style>
+.logo_deloitte
+{
+ position:absolute;
+  height:50px;
+  width:200px;
+  left:20px;
+  top:30px;
+  filter: grayscale(000%); 
+}
+
+.logo_deloitte:hover{
+ filter: grayscale(100%);
+}
+</style>
+
 </html>		
 		
 		
