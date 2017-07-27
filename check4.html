@@ -16,7 +16,7 @@
 
 </head>	
 
-<body bgcolor="#313131" onload initViz()>
+<body bgcolor="#313131" onload="initViz();">
 <img src="deloitte-logo.svg" class="logo_deloitte" alt="Deloitte">
 
 <h1> <font color='white'>Storm Tracking" viz by National Oceanic and Atmospheric Administration</font color> </h1>
@@ -57,7 +57,7 @@ if (annyang) {
 
 <script>
 var viz, workbook, activeSheet, Worksheet, worksheet;
-function initializeViz(){
+function initViz(){
 
 var placeholderDiv = document.getElementById("tableauViz");
 
@@ -76,7 +76,7 @@ var options = {
 }
 
 //Vinzzy says hello
-responsiveVoice.speak('Welcome Storm Tracking Dashboard. How may I help you?','UK English Male');
+responsiveVoice.speak('Welcome to Storm Tracking Dashboard. How may I help you?','UK English Male');
 
 //Make Storm selection
 function selectAlex()
