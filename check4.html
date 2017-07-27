@@ -32,8 +32,12 @@ if (annyang) {
   	//'Select ALEX':function() { selectAlex(); responsiveVoice.speak('selecting ALEX', 'UK English Male'); },
  	//'Select Bonnie': function() { selectBonnie(); responsiveVoice.speak('selecting Bonnie'); },
  	//'Select Colin': function() { selectColin(); responsiveVoice.speak('selecting Colin'); },
+'Select *tag': ShowSelect,
+  Var ShowSelect=function(tag)
+{
+activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', tag, 'REPLACE'); 
+}	
 	
-	'Select *tag': ShowSelect,
 	
  	'Select Danielle': function() { selectDanielle(); responsiveVoice.speak('selecting Danielle'); },
 	'Select EARL': function() { selectEarl(); responsiveVoice.speak('selecting EARL'); },
@@ -55,10 +59,7 @@ if (annyang) {
   // Start listening.
   annyang.start();
   
-  Var ShowSelect=function(tag)
-{
-activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', tag, 'REPLACE'); 
-}
+
 }
 </script>
 
@@ -106,6 +107,7 @@ Var ShowSelect=function(tag)
 {
 activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', tag, 'REPLACE'); 
 }*/
+
 
 function selectDanielle()
 	{
