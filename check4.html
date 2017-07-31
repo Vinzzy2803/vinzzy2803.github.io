@@ -32,7 +32,7 @@ if (annyang) {
   	//'Select ALEX':function() { selectAlex(); responsiveVoice.speak('selecting ALEX', 'UK English Male'); },
  	'Select Bonnie': function() { selectBonnie(); responsiveVoice.speak('selecting Bonnie'); },
  	'Select Colin': function() { selectColin(); responsiveVoice.speak('selecting Colin'); },
-   //'Select *tag': ShowSelect,
+   //'Select *val': ShowSelect,
 	
 	
  	'Select Danielle': function() { selectDanielle(); responsiveVoice.speak('selecting Danielle'); },
@@ -48,15 +48,27 @@ if (annyang) {
 	'export': function() { exportPDF(); responsiveVoice.speak('exporting'); },
 	'start over': function() { startover(); responsiveVoice.speak('starting over',); }
  };
+ 
+ if (annyang)
+ {
+ var commands2 = {
+  'Hi *val': function(val)
+  {
+  responsiveVoice.speak('ALEX');
+  }
+  };
+	
+ 
 
 
  
   // Add commands to annyang
   annyang.addCommands(commands);
-  
+  annyang.addCommands(commands2);
   // Start listening.
   annyang.start();
-  annyang.setPrefix('Hello, Tableau');
+  annyang.debug();
+  //annyang.setPrefix('Hello, Tableau');
 
  /*Var ShowSelect=function(tag)
 {
