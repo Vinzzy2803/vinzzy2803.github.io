@@ -33,8 +33,8 @@ if (annyang) {
  	'Select Bonnie': function() { selectBonnie(); responsiveVoice.speak('selecting Bonnie'); },
  	'Select Colin': function() { selectColin(); responsiveVoice.speak('selecting Colin'); },
    //'Select *val': ShowSelect,
-	'Hello *val':function() { responsiveVoice.speak('Yes Val'); },
-	
+	//'Hello *val':function() { responsiveVoice.speak('Yes Val'); },
+	'Hello *val': function() { selectAlex(); responsiveVoice.speak('selecting ALEX', 'UK English Male'); },
  	'Select Danielle': function() { selectDanielle(); responsiveVoice.speak('selecting Danielle'); },
 	'Select EARL': function() { selectEarl(); responsiveVoice.speak('selecting EARL'); },
 	'Select FIONA': function() { selectFiona(); responsiveVoice.speak('selecting FIONA'); },
@@ -104,10 +104,10 @@ activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name',+tag, 'REPLACE');
 }*/
 
 
-/*function selectAlex()
+function selectAlex()
 	{
 	activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', 'ALEX', 'REPLACE'); 
-	}*/
+	}
 
 function selectBonnie()
 	{
