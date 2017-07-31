@@ -29,10 +29,10 @@ if (annyang) {
   // These are the voice commands in quotes followed by the function
  var commands = {
   //  'Open Storm Tracking Dashboard': function() { initializeViz(); responsiveVoice.speak('initializing the Storm Tracking dashboard for you', "UK English Male"); },
-  	'Select ALEX':function() { selectAlex(); responsiveVoice.speak('selecting ALEX', 'UK English Male'); },
+  	//'Select ALEX':function() { selectAlex(); responsiveVoice.speak('selecting ALEX', 'UK English Male'); },
  	'Select Bonnie': function() { selectBonnie(); responsiveVoice.speak('selecting Bonnie'); },
  	'Select Colin': function() { selectColin(); responsiveVoice.speak('selecting Colin'); },
-//'Select *tag': ShowSelect,
+'Select *tag': ShowSelect,
 	
 	
  	'Select Danielle': function() { selectDanielle(); responsiveVoice.speak('selecting Danielle'); },
@@ -59,8 +59,8 @@ if (annyang) {
 
  /*Var ShowSelect=function(tag)
 {
-activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', tag, 'REPLACE'); 
-}	*/
+activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name',+tag, 'REPLACE'); 
+}*/
   
 
 }
@@ -89,11 +89,18 @@ var options = {
 //Vinzzy says hello
 responsiveVoice.speak('Welcome to Storm Tracking Dashboard. How may I help you?','UK English Male');
 
+
 //Make Storm selection
-function selectAlex()
+Var ShowSelect=function(tag)
+{
+activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name',+tag, 'REPLACE'); 
+}
+
+
+/*function selectAlex()
 	{
 	activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', 'ALEX', 'REPLACE'); 
-	}
+	}*/
 
 function selectBonnie()
 	{
@@ -104,13 +111,6 @@ function selectColin()
 	{
 	activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', 'COLIN', 'REPLACE'); 
 	}	
-
-
-/*Var ShowSelect=function(tag)
-{
-activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', tag, 'REPLACE'); 
-}*/
-
 
 function selectDanielle()
 	{
