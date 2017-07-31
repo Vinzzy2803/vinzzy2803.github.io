@@ -46,13 +46,13 @@ if (annyang) {
 	'Filter WEST PACIFIC': function() { filterBasinWestPacific(); responsiveVoice.speak('Filtering Basin WEST PACIFIC'); },
 	'REMOVE FILTER': function() { removeFilter();responsiveVoice.speak('Removing Filters'); },
 	'export': function() { exportPDF(); responsiveVoice.speak('exporting'); },
-	'start over': function() { startover(); responsiveVoice.speak('starting over',); }
+	'start over': function() { startover(); responsiveVoice.speak('starting over'); }
  };
  
  if (annyang)
  {
  var commands2 = {
-  'Hi *val': function(val)
+  'Hello *val': function(val)
   {
   responsiveVoice.speak('ALEX');
   }
