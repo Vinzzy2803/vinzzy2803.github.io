@@ -49,16 +49,16 @@ if (annyang) {
 	'start over': function() { startover(); responsiveVoice.speak('starting over'); }
  }
  
- var commands2 = {
+ /*var commands2 = {
   'Hello *val': function(val)
   {
   responsiveVoice.speak('ALEX');
-  }
+  }*/
  
  
   // Add commands to annyang
   annyang.addCommands(commands);
-  annyang.addCommands(commands2);
+  //annyang.addCommands(commands2);
   // Start listening.
   annyang.start();
   annyang.debug();
