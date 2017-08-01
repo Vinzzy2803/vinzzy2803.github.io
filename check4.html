@@ -43,10 +43,10 @@ if (annyang) {
 	'export': function() { exportPDF(); responsiveVoice.speak('exporting'); },
 	'start over': function() { startover(); responsiveVoice.speak('starting over',); },
 	
-	'Hello *val': function(val){
+	'Hello *val': function(val.ignoreCase){
 	//'select'+val+'();';
 	var hh='selecting'+' '+val;
-	selectStorm(val);
+	selectStorm(val.ignoreCase);
 	responsiveVoice.speak(hh);
 	}
  };
