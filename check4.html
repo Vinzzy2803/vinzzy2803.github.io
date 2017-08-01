@@ -45,11 +45,11 @@ if (annyang) {
 		var hh='selecting'+' '+val;
 		responsiveVoice.speak(hh);
 	//SelectStorm(val);
-	}
+	},
 	
 	
- 	/*'Select Danielle': function() { selectDanielle(); responsiveVoice.speak('selecting Danielle'); },
-	'Select EARL': function() { selectEarl(); responsiveVoice.speak('selecting EARL'); },
+ 	'Select Danielle': function() { selectDanielle(); responsiveVoice.speak('selecting Danielle'); },
+	/*'Select EARL': function() { selectEarl(); responsiveVoice.speak('selecting EARL'); },
 	'Select FIONA': function() { selectFiona(); responsiveVoice.speak('selecting FIONA'); },
 	'Select FIVE': function() { selectFive(); responsiveVoice.speak('selecting FIVE'); },
 	'Select GASTON': function() { selectGaston(); responsiveVoice.speak('selecting GASTON'); },
@@ -130,14 +130,14 @@ function selectBonnie()
 function selectColin()
 	{
 	activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', 'COLIN', 'REPLACE'); 
-	}	
+	}*/	
 
 function selectDanielle()
 	{
 	activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', 'DANIELLE', 'REPLACE'); 
 	}
 	
-function selectEarl()
+/*function selectEarl()
 	{
 	activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', 'EARL', 'REPLACE'); 
 	}
@@ -173,7 +173,7 @@ function selectEarl()
         }
 
      	
-	 function filterBasinAtlantic()
+	/* function filterBasinAtlantic()
     {
     activeSheet.getWorksheets()[1].applyFilterAsync('Basin', 'Atlantic', tableauSoftware.FilterUpdateType.REPLACE); 
     }
@@ -191,14 +191,12 @@ function selectEarl()
 	function removeFilter()
 {
 activeSheet.getWorksheets()[0].applyFilterAsync('Basin', ['Atlantic', 'East Pacific', 'West Pacific'],tableauSoftware.FilterUpdateType.ALL); 
-}
+}*/
 
 function exportPDF()
 {
-
-viz.showExportPDFDialog();
+iz.showExportPDFDialog();
 }
-
 
 	
 //Start Viz Over
