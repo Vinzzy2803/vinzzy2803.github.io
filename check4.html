@@ -43,11 +43,15 @@ if (annyang) {
 	'export': function() { exportPDF(); responsiveVoice.speak('exporting'); },
 	'start over': function() { startover(); responsiveVoice.speak('starting over',); },
 	
-	'Hello *val': function(val.ignoreCase){
+	/*'Hello *val': function(val){
 	//'select'+val+'();';
 	var hh='selecting'+' '+val;
 	selectStorm(val.ignoreCase);
 	responsiveVoice.speak(hh);
+	}*/
+	'Hello *val': function(){
+	selectStorm(val.ignoreCase);
+	responsiveVoice.speak('selecting'));
 	}
  };
   
