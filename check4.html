@@ -28,10 +28,10 @@
 if (annyang) {
   // These are the voice commands in quotes followed by the function
  var commands = {
-  //  'Open Storm Tracking Dashboard': function() { initializeViz(); responsiveVoice.speak('initializing the Storm Tracking dashboard for you', "UK English Male"); },
-  	//'Select ALEX':function() { selectAlex(); responsiveVoice.speak('selecting ALEX', 'UK English Male'); },
- 	//'Select Bonnie': function() { selectBonnie(); responsiveVoice.speak('selecting Bonnie'); },
- 	//'Select Colin': function() { selectColin(); responsiveVoice.speak('selecting Colin'); },
+  //'Open Storm Tracking Dashboard': function() { initializeViz(); responsiveVoice.speak('initializing the Storm Tracking dashboard for you', "UK English Male"); },
+  	'Select ALEX':function() { selectAlex(); responsiveVoice.speak('selecting ALEX', 'UK English Male'); },
+ 	'Select Bonnie': function() { selectBonnie(); responsiveVoice.speak('selecting Bonnie'); },
+ 	'Select Colin': function() { selectColin(); responsiveVoice.speak('selecting Colin'); },
    //'Select *val': ShowSelect,
 	//'Hello *val':function() { responsiveVoice.speak('Yes Val'); },
 	//'Hello *val': function() { selectAlex(); responsiveVoice.speak('selecting ALEX', 'UK English Male'); },
@@ -40,15 +40,15 @@ if (annyang) {
 	var hh='selecting'+' '+val;
 	
 	responsiveVoice.speak(hh);
-	},*/
+	},
 	'Hello *val': function(val){ 
 		var hh='selecting'+' '+val;
 		responsiveVoice.speak(hh);
 	//SelectStorm(val);
-	},
+	},*/
 	
 	
- 	'Select Danielle': function() { selectDanielle(); responsiveVoice.speak('selecting Danielle'); },
+ 	'Select Danielle': function() { selectDanielle(); responsiveVoice.speak('selecting Danielle'); }
 	/*'Select EARL': function() { selectEarl(); responsiveVoice.speak('selecting EARL'); },
 	'Select FIONA': function() { selectFiona(); responsiveVoice.speak('selecting FIONA'); },
 	'Select FIVE': function() { selectFive(); responsiveVoice.speak('selecting FIVE'); },
@@ -59,14 +59,10 @@ if (annyang) {
 	'Filter WEST PACIFIC': function() { filterBasinWestPacific(); responsiveVoice.speak('Filtering Basin WEST PACIFIC'); },
 	'REMOVE FILTER': function() { removeFilter();responsiveVoice.speak('Removing Filters'); },
 	'export': function() { exportPDF(); responsiveVoice.speak('exporting'); },
-	'start over': function() { startover(); responsiveVoice.speak('starting over'); }
- }*/
+	'start over': function() { startover(); responsiveVoice.speak('starting over'); }*/
+ }
  
- /*var commands2 = {
-  'Hello *val': function(val)
-  {
-  responsiveVoice.speak('ALEX');
-  }*/
+ 
  
  
   // Add commands to annyang
@@ -77,10 +73,6 @@ if (annyang) {
   annyang.debug();
   //annyang.setPrefix('Hello, Tableau');
 
- /*Var ShowSelect=function(tag)
-{
-activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name',+tag, 'REPLACE'); 
-}*/
   
 
 }
@@ -117,7 +109,7 @@ activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name',+tag, 'REPLACE');
 }*/
 
 
-/*function selectAlex()
+function selectAlex()
 	{
 	activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', 'ALEX', 'REPLACE'); 
 	}
@@ -130,7 +122,7 @@ function selectBonnie()
 function selectColin()
 	{
 	activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', 'COLIN', 'REPLACE'); 
-	}*/	
+	}
 
 function selectDanielle()
 	{
@@ -161,7 +153,7 @@ function selectDanielle()
 	{
 	activeSheet.getWorksheets()[0].selectMarksAsync('Storm Name', 'HERMINE', 'REPLACE'); 
 	}
-*/
+
 
  function SelectStorm(stm) {
             var sheet = viz.getWorkbook().getActiveSheet();
@@ -173,7 +165,7 @@ function selectDanielle()
         }
 
      	
-	/* function filterBasinAtlantic()
+	 function filterBasinAtlantic()
     {
     activeSheet.getWorksheets()[1].applyFilterAsync('Basin', 'Atlantic', tableauSoftware.FilterUpdateType.REPLACE); 
     }
@@ -195,7 +187,7 @@ activeSheet.getWorksheets()[0].applyFilterAsync('Basin', ['Atlantic', 'East Paci
 
 function exportPDF()
 {
-iz.showExportPDFDialog();
+viz.showExportPDFDialog();
 }
 
 	
