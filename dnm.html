@@ -91,32 +91,6 @@ responsiveVoice.speak('Welcome to Storm Tracking Dashboard. How may I help you?'
         }
 */
      	
-	 function filterBasinAtlantic()
-    {
-    activeSheet.getWorksheets()[1].applyFilterAsync('Basin', 'Atlantic', tableauSoftware.FilterUpdateType.REPLACE); 
-    }
-	
-	function filterBasinEastPacific()
-    {
-    activeSheet.getWorksheets()[1].applyFilterAsync('Basin', 'East Pacific', tableauSoftware.FilterUpdateType.REPLACE); 
-    }
-	
-	function filterBasinWestPacific()
-    {
-    activeSheet.getWorksheets()[1].applyFilterAsync('Basin', 'West Pacific', tableauSoftware.FilterUpdateType.REPLACE); 
-    }
-	
-	function removeFilter()
-{
-activeSheet.getWorksheets()[0].applyFilterAsync('Basin', ['Atlantic', 'East Pacific', 'West Pacific'],tableauSoftware.FilterUpdateType.ALL); 
-}
-
-function exportPDF()
-{
-
-viz.showExportPDFDialog();
-}
-
 
 	
 //Start Viz Over
