@@ -30,19 +30,25 @@ if (annyang) {
  var commands = {
   //  'Open Storm Tracking Dashboard': function() { initializeViz(); responsiveVoice.speak('initializing the Storm Tracking dashboard for you', "UK English Male"); },
   	//'Select ALEX':function() { selectAlex(); responsiveVoice.speak('selecting ALEX', 'UK English Male'); },
- 	'Select Bonnie': function() { selectBonnie(); responsiveVoice.speak('selecting Bonnie'); },
- 	'Select Colin': function() { selectColin(); responsiveVoice.speak('selecting Colin'); },
+ 	//'Select Bonnie': function() { selectBonnie(); responsiveVoice.speak('selecting Bonnie'); },
+ 	//'Select Colin': function() { selectColin(); responsiveVoice.speak('selecting Colin'); },
    //'Select *val': ShowSelect,
 	//'Hello *val':function() { responsiveVoice.speak('Yes Val'); },
 	//'Hello *val': function() { selectAlex(); responsiveVoice.speak('selecting ALEX', 'UK English Male'); },
-	'Hello *val': function(val){
+	/*'Hello *val': function(val){
 	'select'+val+'();';
 	var hh='selecting'+' '+val;
+	
 	responsiveVoice.speak(hh);
+	},*/
+	'Hello *val': function(val){ 
+		var hh='selecting'+' '+val;
+		responsiveVoice.speak(hh);
+	SelectStorm(val);
 	},
 	
 	
- 	'Select Danielle': function() { selectDanielle(); responsiveVoice.speak('selecting Danielle'); },
+ 	/*'Select Danielle': function() { selectDanielle(); responsiveVoice.speak('selecting Danielle'); },
 	'Select EARL': function() { selectEarl(); responsiveVoice.speak('selecting EARL'); },
 	'Select FIONA': function() { selectFiona(); responsiveVoice.speak('selecting FIONA'); },
 	'Select FIVE': function() { selectFive(); responsiveVoice.speak('selecting FIVE'); },
@@ -54,7 +60,7 @@ if (annyang) {
 	'REMOVE FILTER': function() { removeFilter();responsiveVoice.speak('Removing Filters'); },
 	'export': function() { exportPDF(); responsiveVoice.speak('exporting'); },
 	'start over': function() { startover(); responsiveVoice.speak('starting over'); }
- }
+ }*/
  
  /*var commands2 = {
   'Hello *val': function(val)
@@ -111,7 +117,7 @@ activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name',+tag, 'REPLACE');
 }*/
 
 
-function selectAlex()
+/*function selectAlex()
 	{
 	activeSheet.getWorksheets()[1].selectMarksAsync('Storm Name', 'ALEX', 'REPLACE'); 
 	}
@@ -155,7 +161,18 @@ function selectEarl()
 	{
 	activeSheet.getWorksheets()[0].selectMarksAsync('Storm Name', 'HERMINE', 'REPLACE'); 
 	}
-	
+*/
+
+ function SelectStorm(stm) {
+            var sheet = viz.getWorkbook().getActiveSheet();
+            if (stm === "") {
+                sheet.clearFilterAsync("Storm Name");
+            } else {
+                sheet.applyFilterAsync("Storm Name", stm, tableau.FilterUpdateType.REPLACE);
+            }
+        }
+
+     	
 	 function filterBasinAtlantic()
     {
     activeSheet.getWorksheets()[1].applyFilterAsync('Basin', 'Atlantic', tableauSoftware.FilterUpdateType.REPLACE); 
