@@ -45,7 +45,7 @@ if (annyang) {
 	'Hello *val': function(val){
 	'select'+val+'();';
 	var hh='selecting'+' '+val;
-	
+	SelectStorm(val);
 	responsiveVoice.speak(hh);
 	}
  };
@@ -152,9 +152,11 @@ function exportPDF()
 
 viz.showExportPDFDialog();
 }
+function SelectStorm(val) {
+            var sheet = viz.getWorkbook().getActiveSheet();
+            sheet.applyFilterAsync("Storm Name",val,tableauSoftware.FilterUpdateType.REPLACE);
+            }
 
-
-	
 //Start Viz Over
 function startover()
 	{
