@@ -41,7 +41,13 @@ if (annyang) {
 	'Filter WEST PACIFIC': function() { filterBasinWestPacific(); responsiveVoice.speak('Filtering Basin WEST PACIFIC'); },
 	'REMOVE FILTER': function() { removeFilter();responsiveVoice.speak('Removing Filters'); },
 	'export': function() { exportPDF(); responsiveVoice.speak('exporting'); },
-	'start over': function() { startover(); responsiveVoice.speak('starting over',); }
+	'start over': function() { startover(); responsiveVoice.speak('starting over',); },
+	'Hello *val': function(val){
+	'select'+val+'();';
+	var hh='selecting'+' '+val;
+	
+	responsiveVoice.speak(hh);
+	}
  };
   
   // Add commands to annyang
