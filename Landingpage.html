@@ -22,7 +22,7 @@
   </head>
 
  
-<body bgcolor="#313131">
+<body bgcolor="#313131" onload="greetUser()" onkeypress="startListening()">
 <img src="deloitte-logo.svg" class="logo_deloitte" alt="Deloitte">
 <h1 class="head">Viz Assistant!</h1>
 <h2 class="head1">Hello Tableau<h2>
@@ -32,16 +32,31 @@
 
 
 
-<center><img src="picture1.png" width="145" height="126" alt="Mic" class="mic"> </center>
+<center><img src="picture1.png" width="145" height="126" alt="Mic" class="mic" onclick="startListening()"> </center>
    
 
 <div id="audio"></div>
 
 <script>
+
+function greetUser(){
+responsiveVoice.speak('Hi.I am your Voice Assistantant. How may I help you?','UK English Male');
+}
+
+/*function feedbackUser()
+{
+responsiveVoice.speak('I could not get you. Can you please Click on the microphone and speak ?','UK English Male');
+}*/
+
+
+
+function startListening(){
+
+//setTimeout(feedbackUser(),10000); 
+
 if (annyang) {
-  //<h5><i>Visualization Created by <a href="https://twitter.com/hemangbhavasar" target="_blank"><span class="Name"><i>Sarat //Varanasi	</i></span></a> 
-	//</i></h5> Previous Heading
-  // These are the voice commands in quotes followed by the function
+
+
   var errorhandler = function(errorhandler) { alert('Please provide correct input');}
   var commands = {
 	'Storm Dashboard': function() { Storm(); responsiveVoice.speak('opening Storm dashboard for you', "UK English Male"); },
@@ -56,7 +71,8 @@ if (annyang) {
   // Start listening.
   annyang.start();
 }
-responsiveVoice.speak('Hi. My name is Vinzzy. How may I help you?','UK English Male');
+}
+
 </script>
 
 <script>
